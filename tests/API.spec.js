@@ -8,7 +8,7 @@ test.describe('Reqres API Automation', () => {
   test('Create a new user', async ({ request }) => {
     const response = await request.post(`${BASE_URL}/users`, {
       headers: {
-        "x-api-key": "reqres_66f608ca2da14fcfbda8a7bc6cf8637b",
+        "x-api-key": "free_user_3ENXydLdbq5RqefmFMJueYF8J3U",
         "Content-Type": "application/json"
       },
       data:{
@@ -30,7 +30,7 @@ test.describe('Reqres API Automation', () => {
 test('Get the user details', async ({ request }) => {
   const response = await request.get(`${BASE_URL}/users/2`, {
     headers: { 
-      "x-api-key": "reqres_66f608ca2da14fcfbda8a7bc6cf8637b"
+      "x-api-key": "free_user_3ENXydLdbq5RqefmFMJueYF8J3U"
      }
   });
   expect(response.status()).toBe(200);
@@ -45,7 +45,7 @@ test('Get the user details', async ({ request }) => {
   test('Update user name', async ({ request }) => {
     const response = await request.put(`${BASE_URL}/users/2`, {
      headers: {
-        "x-api-key": "reqres_66f608ca2da14fcfbda8a7bc6cf8637b",
+        "x-api-key": "free_user_3ENXydLdbq5RqefmFMJueYF8J3U",
         "Content-Type": "application/json"
       },
       data: {

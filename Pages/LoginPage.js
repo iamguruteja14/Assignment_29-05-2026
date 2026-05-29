@@ -9,7 +9,7 @@ class LoginPage {
     this.validatelogoutButton = page.locator('//button[text()="Logout"]');
     this.clickonlogoutButton=page.locator('#submit');
     this.loggedUserName = page.locator('#userName-value');
-    this.clickonlogoutButton=page.locator('#submit')
+    //this.clickonlogoutButton=page.locator('#submit')
   }
 
   async goto() {
