@@ -12,7 +12,7 @@ test.describe('Reqres API Automation', () => {
         "Content-Type": "application/json"
       },
       data:{
-  "name": "Guruteja",
+  "name": "Teja",
   "job": "QA Test Engineer"
 }
     });
@@ -22,7 +22,7 @@ test.describe('Reqres API Automation', () => {
     const body = await response.json();
    const userId = body.id;
     console.log(userId)
-    expect(body.name).toBe('Guruteja');
+    expect(body.name).toBe('Teja');
     expect(body.job).toBe('QA Test Engineer');
   });
 
@@ -49,7 +49,7 @@ test('Get the user details', async ({ request }) => {
         "Content-Type": "application/json"
       },
       data: {
-        name: 'Guruteja DT',
+        name: 'AnilKumar',
         job: 'QA Automation Engineer'
       }
     });
@@ -57,7 +57,7 @@ test('Get the user details', async ({ request }) => {
     expect(response.status()).toBe(200);
 
     const body = await response.json();
-    expect(body.name).toBe('Guruteja DT');
+    expect(body.name).toBe('AnilKumar');
     expect(body.job).toBe('QA Automation Engineer');
   });
 

@@ -3,13 +3,13 @@ const { expect } = require('@playwright/test');
 class LoginPage {
   constructor(page) {
     this.page = page;
-    this.loginButton = page.locator('#login');
-    this.usernameInput = page.locator('#userName');
-    this.passwordInput = page.locator('#password');
-    this.validatelogoutButton = page.locator('//button[text()="Logout"]');
-    this.clickonlogoutButton=page.locator('#submit');
+    this.loginBtn = page.locator('#login');
+    this.username_Input_Field = page.locator('#userName');
+    this.password_Input_Field = page.locator('#password');
+    this.validatelogoutBtn = page.locator('//button[text()="Logout"]');
+    this.clickonlogoutBtn=page.locator('#submit');
     this.loggedUserName = page.locator('#userName-value');
-    //this.clickonlogoutButton=page.locator('#submit')
+    
   }
 
   async goto() {
@@ -18,19 +18,19 @@ class LoginPage {
   }
 
   async login(Username, Password) {
-    await this.loginButton.click();
-    await this.usernameInput.fill(Username);
-    await this.passwordInput.fill(Password);
-    await this.loginButton.click();
+    await this.loginBtn.click();
+    await this.username_Input_Field.fill(Username);
+    await this.password_Input_Field.fill(Password);
+    await this.loginBtn.click();
   }
 
   async validateLogin(Username) {
     await expect(this.loggedUserName).toHaveText(Username);
-    await expect(this.validatelogoutButton).toHaveText('Logout');
+    await expect(this.validatelogoutBtn).toHaveText('Logout');
   }
 
   async logout() {
-    await this.clickonlogoutButton.click();
+    await this.clickonlogoutBtn.click();
   }
 }
 

@@ -29,13 +29,13 @@ class BookStorePage {
   const title = await row.locator('td:nth-child(2)').innerText();
   const author = await row.locator('td:nth-child(3)').innerText();
   const publisher = await row.locator('td:nth-child(4)').innerText();
-    const Iformation = `
+    const Details = `
 Title: ${title}
 Author: ${author}
 Publisher: ${publisher}
 `;
 
-    fs.writeFileSync('book-details.txt', Iformation, 'utf-8');
+    fs.writeFileSync('book-details.txt', Details, 'utf-8');
   }
 
 }
